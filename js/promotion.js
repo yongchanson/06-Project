@@ -38,6 +38,7 @@ for(var i = 0; i < tabList.length; i++){
     
   });
 }
+// document.querySelector("#tab1").style.display ='block';
 
 function AllClick(e) {
     e.preventDefault();
@@ -48,7 +49,7 @@ function AllClick(e) {
             tab1.innerHTML += `<img src=images/menu/${imagesing[i]}></img>` + stronging[i];    
         }
         for(var i=0; i<imagesend.length; i++) {
-            tab1.innerHTML += `<img src=images/menu/${imagesend[i]}></img>` + strongend[i];      
+            tab1.innerHTML += `<img id="end" src=images/menu/${imagesend[i]}></img>` + strongend[i];      
         }
     }
     
@@ -77,7 +78,7 @@ function EndClick(e) {
     
     for(var i=0; i<imagesend.length; i++) {
   // // while(i<imagesing.length)  {
-    tab3.innerHTML += `<img src=images/menu/${imagesend[i]}></img>` + strongend[i];      
+    tab3.innerHTML += `<img id="end" src=images/menu/${imagesend[i]}></img>` + strongend[i];      
       
       }
     } 
