@@ -44,7 +44,7 @@ function AllClick(e) {
     e.preventDefault();
 
     if(parseInt(tab1.innerHTML.length) < 10 ){
-    
+       
         for(var i=0; i<imagesing.length; i++) {
             tab1.innerHTML += `<img src=images/menu/${imagesing[i]}></img>` + stronging[i];    
         }

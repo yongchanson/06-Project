@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {width: 100%;}
+        div {display: block;}
+        .tmb{margin:0;padding:0;width:366px;height:300px;}
+        .con {padding: 24px 30px; width:306px; height:90px; margin:0px;}
+        .none{display:none;}
+        #bgWhats01inner {
+        width:1168px;
+        height: 155px;
+        margin: 60px 60px 0 60px;
+        }
+        .visualArea .inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 200px;
+        margin: auto;
+        padding-bottom: 15px;
+        }
+        .visualArea .titDep1 {
+        color: inherit;
+        font-size: 50px;
+        }
+        .titDep1 {
+        display: block;
+        color: #292929;
+        font-size: 55px;
+        line-height: 1;
+        font-weight: 700;
+        }
+        .navPath li {
+        display: inline-block;
+        color:white;
+        font-weight: 700;
+        font-size: 16px;
+        }
+        .navPath li+li:before {
+        content: '';
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        margin: 0 14px0 10px;
+        vertical-align: middle;
+        border-radius: 100%;
+        background: #f5bd43;
+        }
+        .visualArea.bgWhats01 {
+        color: #fff;
+        background: url(./images/bg_visual_whats02.jpg) 50% 50% no-repeat;
+        }
+        .visualArea {
+        display: flex;
+        position: relative;
+        min-height: 220px;
+        width:100%;
+        height:250px;
+        padding: 10px 0;
+        color: #292929;
+        text-align: left;
+        margin: 0;
+        }
+        h1, h2, h3, h4, h5, h6, strong, b {
+        font-weight: 500;
+        }
+        .TrueRed
+        {color: #db0007;
+        font-weight: 600;
+        border-bottom: 1px solid #db0007;
+        /* display: block; */
+        height: 40px;
+        font-size: 20px;
+        line-height: 39px;
+        }
+        .FalseRed
+        {
+        display: block;
+        height: 40px;
+        font-size: 20px;
+        line-height: 39px;
+        text-decoration: none;
+        color: inherit;
+        font-weight: 600;
+        }
+        .tabType01 {
+        margin: 0 -40px 60px;
+        text-align: center;
+        /* margin-left: auto;
+        margin-right: auto; */
+        }
+        .tabType01 li{
+        display:inline-block;
+        margin : 0 40px;
+        vertical-align:top;
+        }
+        .tabType01 li a{
+        font-weight:bold;
+        display:block;
+        height: 40px;
+        font-size : 20px;
+        line-height:39px;
+        }   
+        body, input, select, textarea, button, pre {
+        font-family: SpeedeeK, Malgun Gothic,'맑은 고딕', Dotum,'돋움', Arial, sans-serif;
+        color: #808080;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.9;
+        }
+        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, select, textarea, p, blockquote, th, td, button {
+        margin: 0;
+        padding: 0;
+        }
+        .inner {
+        position: relative;
+        width: 1168px;
+        margin: 0 auto;
+        }
+        .cardBanner {
+        margin: 0 0 -35px -35px;
+        }
+        .cardBanner li {
+        float: left;
+        width: 366px;
+        height: 438px;
+        margin: 0 0 35px 35px;
+        }
+        .cardBanner li a {
+        display: block;
+        overflow: hidden;
+        height: 100%;
+        border-radius: 10px;
+        box-shadow: 0 3px 4px rgb(0 0 0 / 10%);
+        }
+        li {
+        list-style: none outside;
+        }
+        li {
+        display: list-item;
+        text-align: -webkit-match-parent;
+        }
+        .cardBanner li .con {
+        padding: 24px 30px;
+        }    
+        .cardBanner li .con .tit {
+        display: -webkit-box;
+        display: block;
+        height: 90px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        font-size: 18px;
+        color: #292929;
+        font-weight: 500;
+        line-height: 1.7;
+        font-weight:bold;
+        }
+        img {
+        margin: 0;
+        padding: 0;
+        line-height: 0;
+        vertical-align: top;
+        border-radius: 10px;
+        }
+        #promotionList{
+        width:1203px;
+        height:946px;
+        margin-left: auto;
+        margin-right: auto;
+        }
+        .content .contArea.bgG {
+        background: #fbfbfb;
+        }
+        .content .contArea {
+        padding: 30px 0 60px;
+        }
+        .content .contArea>.inner {
+        position: static!important;
+        }
+        .content .contArea>:first-child {
+        margin-top: 0!important;
+        }
+    </style>
+</head>
+<body>
+    <!-- header-->
+<div id="container">
+ <div class="content">
+  <div class="content">        
+    <div class="visualArea bgWhats01">
+        <div class="inner" id="bgWhats01inner">
+            <h1 class="titDep1" data-title="맥도날드  프로모션" data-desc="맥도날드 프로모션">맥도날드 프로모션</h1>
+            <ul class="navPath">
+                <li><a style="list-style: none;">Home</a></li>
+                <li><a>What's New</a></li>
+                <li><a>맥도날드 프로모션</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 전체보기/진행중/종료 탭 -->
+    <ul class="tabType01">
+        <li><a id="allbtn" role="button" class="TrueRed">전체보기</a></li>
+        <li><a id="ingbtn" role="button" class="FalseRed">진행중</a></li>
+        <li><a id="endbtn" role="button" class="FalseRed">종료</a></li>
+    </ul>
+
+    
+    <ul class="cardBanner" id="promotionList">
+        <!-- 진행중 메뉴 -->
+        <li class="ing">
+            <a class="ingpage1" data="345,1,N">
+                <div class="tmb"><img src="./upload/bbs/promotion/1635831788361.png" alt="맥도날드 앱에서 만나는 달콤한 바닐라 라떼 무료 쿠폰!"></div>
+                <div class="con">
+                    <strong class="tit">맥도날드 앱에서 만나는 <br>달콤한 바닐라 라떼 무료 쿠폰!</strong><span id="statusSpan"></span>
+                </div>
+            </a>
+        </li>
+        
+        <li class="ing">
+            <a class="ingpage1" data="344,2,N">
+                <div class="tmb"><img src="./upload/bbs/promotion/1635496530217.png" alt="딸기의 상큼함을 한 잔에!  딸기 칠러가 돌아왔다!"></div>
+                <div class="con">
+                    <strong class="tit">딸기의 상큼함을 한 잔에! <br> 딸기 칠러가 돌아왔다!</strong><span id="statusSpan"></span>
+                </div>
+            </a>
+        </li>
+        
+        <li class="ing">
+            <a class="ingpage1" data="340,3,N">
+                <div class="tmb"><img src="./upload/bbs/promotion/1634545116436.png" alt="매콤하고 진한 찐 아메리칸 소울!  NEW 스파이시 맥앤치즈 버거"></div>
+                <div class="con">
+                    <strong class="tit">매콤하고 진한 찐 아메리칸 소울! <br> NEW 스파이시 맥앤치즈 버거</strong><span id="statusSpan"></span>
+                </div>
+            </a>
+        </li>
+        
+        <li class="ing">
+            <a class="ingpage1" data="338,4,N">
+                <div class="tmb"><img src="./upload/bbs/promotion/1631773613419.png" alt="달콤! 바삭! 쫄깃! 츄러스 출시 새로운 해피 스낵 가을/겨울 시즌 오픈!"></div>
+                <div class="con">
+                    <strong class="tit">달콤! 바삭! 쫄깃! 츄러스 출시 <br>새로운 해피 스낵 가을/겨울 시즌 오픈!</strong><span id="statusSpan"></span>
+                </div>
+            </a>
+        </li>
+        
+        <li class="ing">
+            <a class="ingpage1" data="325,5,N">
+                <div class="tmb"><img src="./upload/bbs/promotion/1622073800342.png" alt="육즙도 3배! 진한 풍미도 3배! 트리플 치즈버거  컴백!"></div>
+                <div class="con">
+                    <strong class="tit">육즙도 3배! 진한 풍미도 3배! <br>트리플 치즈버거  컴백!</strong><span id="statusSpan"></span>
+                </div>
+            </a>
+        </li>
+        
+        <li class="ing">
+            <a class="ingpage1" data="320,6,N">
+                <div class="tmb"><img src="./upload/bbs/promotion/1617837377223.png" alt="스트로베리 2종 아이스크림 출시!"></div>
+                <div class="con">
+                    <strong class="tit">스트로베리 2종 아이스크림 출시!</strong><span id="statusSpan"></span>
+                </div>
+            </a>
+        </li>
+        
+        <li class="ing">
+            <a class="ingpage2" data="317,7,N">
+                <div class="tmb"><img src="./upload/bbs/promotion/1617186557979.png" alt="신선한 맛 가득 담아 알래스카에서 왔다!필레 오 피쉬 출시!"></div>
+                <div class="con">
+                    <strong class="tit">신선한 맛 가득 담아 알래스카에서 왔다!<br>필레 오 피쉬 출시!</strong><span id="statusSpan"></span>
+                </div>
+            </a>
+        </li>
+        
+        <li class="ing">
+            <a class="ingpage2" data="306,8,N">
+                <div class="tmb"><img src="./upload/bbs/promotion/1610899322892.png" alt="0.1초에 1잔!  매일 마시는 커피를 더 맛있게"></div>
+                <div class="con">
+                    <strong class="tit">0.1초에 1잔!  <br>매일 마시는 커피를 더 맛있게</strong><span id="statusSpan"></span>
+                </div>
+            </a>
+        </li>
+        
+        <li class="ing">
+            <a class="ingpage2" data="278,9,N">
+                <div class="tmb"><img src="./upload/bbs/promotion/1591780776497.png" alt="디테일의 차이가 버거의 차이"></div>
+                <div class="con">
+                    <strong class="tit">디테일의 차이가 버거의 차이</strong><span id="statusSpan"></span>
+                </div>
+            </a>
+        </li>
+        
+        <li class="ing">
+            <a class="ingpage2" data="265,10,N">
+                <div class="tmb"><img src="./upload/bbs/promotion/1585129495762.png" alt="더 편리해진 맥도날드 앱 사용법!"></div>
+                <div class="con">
+                    <strong class="tit">더 편리해진 맥도날드 앱 사용법!</strong><span id="statusSpan"></span>
+                </div>
+            </a>
+        </li>
+        
+        <li class="ing">
+            <a class="ingpage2" data="259,11,N">
+                <div class="tmb"><img src="./upload/bbs/promotion/1614823645089.png" alt="2900원 부터 즐기는 맥모닝 콤보를 만나보세요"></div>
+                <div class="con">
+                    <strong class="tit">2900원 부터 즐기는<br> 맥모닝 콤보를 만나보세요</strong><span id="statusSpan"></span>
+                </div>
+            </a>
+        </li>
+       <!-- end시작부분 -->
+            <li class="end">
+                <a class="endpage1">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1634606805670.png" alt="맥도날드 앱에서 만나는특별한 할로윈 혜택!"></div>
+                    <div class="con">
+                        <strong class="tit">맥도날드 앱에서 만나는<br>특별한 할로윈 혜택!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage1">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1633567702338.png" alt="1955 버거와 함께 할로윈을 더 특별하게! 1955 스모키 더블 베이컨 컴백!"></div>
+                    <div class="con">
+                        <strong class="tit">1955 버거와 함께 할로윈을 더 특별하게! <br>1955 스모키 더블 베이컨 컴백!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage1" data="337,3,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1631068063375.png" alt="점심을 제대로! 굿런치 맥런치!더블 에그 불고기 버거 출시!"></div>
+                    <div class="con">
+                        <strong class="tit">점심을 제대로! 굿런치 맥런치!<br>더블 에그 불고기 버거 출시!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage1" data="336,4,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1630302597739.png" alt="자두 칠러와 제주 한라봉 칠러로 상큼 충전!"></div>
+                    <div class="con">
+                        <strong class="tit">자두 칠러와 제주 한라봉 칠러로 상큼 충전!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage1" data="335,5,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1627975571281.png" alt="입안 가득 펼쳐지는 한국의 맛!  창녕 갈릭 버거"></div>
+                    <div class="con">
+                        <strong class="tit">입안 가득 펼쳐지는 한국의 맛! <br> 창녕 갈릭 버거</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a hclass="endpage1" data="333,6,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1626828888817.png" alt="서머 콜라보레이션맥도날드XLCK 한정판 굿즈!"></div>
+                    <div class="con">
+                        <strong class="tit">서머 콜라보레이션<br>맥도날드XLCK 한정판 굿즈!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage2" data="332,7,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1626274285544.png" alt="어니언을 더해 바삭바삭 풍미 빅뱅!"></div>
+                    <div class="con">
+                        <strong class="tit">어니언을 더해 바삭바삭 풍미 빅뱅!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage2" data="331,8,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1623663732513.png" alt="여름 시즌 새로워진 해피 스낵을 만나보세요!"></div>
+                    <div class="con">
+                        <strong class="tit">여름 시즌 새로워진 해피 스낵을 만나보세요!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage2" data="329,9,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1622021509455.png" alt="기간 한정 콜라보THE BTS 세트"></div>
+                    <div class="con">
+                        <strong class="tit">기간 한정 콜라보<br>THE BTS 세트</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage2" data="326,10,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1621749818779.png" alt="THE BTS 세트 출시"></div>
+                    <div class="con">
+                        <strong class="tit">THE BTS 세트 출시</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage2" data="322,11,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1619605556057.png" alt="함께 할수록 더 즐거운 맛빅맥 베이컨이 돌아왔다!"></div>
+                    <div class="con">
+                        <strong class="tit">함께 할수록 더 즐거운 맛<br>빅맥 베이컨이 돌아왔다!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage2" data="321,12,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1619141488453.png" alt="올해도 여름엔 맥윙!"></div>
+                    <div class="con">
+                        <strong class="tit">올해도 여름엔 맥윙!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage3" data="318,13,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1616983921164.png" alt="제주 한라봉 칠러  &amp; 애플망고 칠러 출시!"></div>
+                    <div class="con">
+                        <strong class="tit">제주 한라봉 칠러  &amp; 애플망고 칠러 출시!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage3" data="315,14,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1615790156611.png" alt="맥딜리버리 앱 /사이트 전용LCK 레전드팩"></div>
+                    <div class="con">
+                        <strong class="tit">맥딜리버리 앱 /사이트 전용<br>LCK 레전드팩</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage3" data="313,15,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1615378916890.png" alt="인기 스낵을 하루 종일 할인된 가격으로!해피스낵 출시!"></div>
+                    <div class="con">
+                        <strong class="tit">인기 스낵을 하루 종일 할인된 가격으로!<br>해피스낵 출시!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage3" data="312,16,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1621417271143.png" alt="두 가지 인기 버거 추가!  더욱 다양해진 New 맥런치 세트"></div>
+                    <div class="con">
+                        <strong class="tit">두 가지 인기 버거 추가!  더욱 다양해진 New 맥런치 세트</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage3" data="297,17,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1603069362577.png" alt="지금 맥드라이브에서 즐겨보세요!"></div>
+                    <div class="con">
+                        <strong class="tit">지금 맥드라이브에서 즐겨보세요!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage3" data="293,18,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1600855327042.png" alt="담백한 맥치킨에 케이준 소스를 더해알싸~한 끝맛!"></div>
+                    <div class="con">
+                        <strong class="tit">담백한 맥치킨에 케이준 소스를 더해<br>알싸~한 끝맛!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage4" data="292,19,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1604569386970.png" alt="맥딜리버리에서 1만 2천원 이상 주문 시 2천 M포인트 사용"></div>
+                    <div class="con">
+                        <strong class="tit">맥딜리버리에서 1만 2천원 이상 주문 시 2천 M포인트 사용</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage4" data="289,20,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1597729239878.png" alt="맥딜리버리 X LCK 이벤트"></div>
+                    <div class="con">
+                        <strong class="tit">맥딜리버리 X LCK 이벤트</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage4" data="285,21,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1596678397851.png" alt="이번 여름, 가장 가까운 짜릿함!모든 탄산음료(M) 각 700원"></div>
+                    <div class="con">
+                        <strong class="tit">이번 여름, 가장 가까운 짜릿함!<br>모든 탄산음료(M) 각 700원</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage4" data="284,22,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1596008889881.png" alt="매주 천만 원 상금과 광고 모델 기회에 빅맥송 트로피까지! #2020빅맥송"></div>
+                    <div class="con">
+                        <strong class="tit">매주 천만 원 상금과 광고 모델 기회에 빅맥송 트로피까지! #2020빅맥송</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage4" data="281,23,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1594018957560.png" alt="아이스커피 M→L 무료 사이즈업!"></div>
+                    <div class="con">
+                        <strong class="tit">아이스커피 M→L 무료 사이즈업!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage4" data="280,24,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1593658125723.png" alt="터지는 육즙 + 아삭한 채소로 더 풍부하게!"></div>
+                    <div class="con">
+                        <strong class="tit">터지는 육즙 + 아삭한 채소로 더 풍부하게!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage5" data="276,25,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1591259933677.png" alt="12000원 이상 선결제 시 M포인트 2000원 사용 가능!"></div>
+                    <div class="con">
+                        <strong class="tit">12000원 이상 선결제 시<br> M포인트 2000원 사용 가능!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage5" data="273,26,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1589951454837.png" alt="언제 먹어도 맛있는 행복,불고기 버거 2000원 &amp; 에그 불고기 버거 3000원"></div>
+                    <div class="con">
+                        <strong class="tit">언제 먹어도 맛있는 행복,<br>불고기 버거 2000원 &amp; 에그 불고기 버거 3000원</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage5" data="272,27,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1590571123990.png" alt="당신의 히어로에게 고마움을 전해보세요!"></div>
+                    <div class="con">
+                        <strong class="tit">당신의 히어로에게 고마움을 전해보세요!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage5" data="271,28,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1589185338206.png" alt="올 여름 맥윙과 함께!맥윙™ 재출시"></div>
+                    <div class="con">
+                        <strong class="tit">올 여름 맥윙과 함께!<br>맥윙™ 재출시</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage5" data="270,29,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1587596922271.png" alt="매콤함의 부드러운 반전!NEW 허니 크림치즈 상하이 버거!"></div>
+                    <div class="con">
+                        <strong class="tit">매콤함의 부드러운 반전!<br>NEW 허니 크림치즈 상하이 버거!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage5" data="262,30,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1581057693731.png" alt="달콤상큼한 라즈베리 크림치즈파이를 다함께 즐겨 보세요!"></div>
+                    <div class="con">
+                        <strong class="tit">달콤상큼한 라즈베리 크림치즈파이를<br> 다함께 즐겨 보세요!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage6" data="258,31,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1579225740332.png" alt="바삭한 치킨 패티로더 맛있고, 더 다양하게!"></div>
+                    <div class="con">
+                        <strong class="tit">바삭한 치킨 패티로<br>더 맛있고, 더 다양하게!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage6" data="257,32,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1577335156742.png" alt="2020년에도 금빛 행운 나누세요! 행운버거 출시"></div>
+                    <div class="con">
+                        <strong class="tit">2020년에도 금빛 행운 나누세요! 행운버거 출시</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage6" data="256,33,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1574848634772.png" alt="진한 딸기 맛이 그대로!  겨울에 즐기는 상큼한 봄의 맛"></div>
+                    <div class="con">
+                        <strong class="tit">진한 딸기 맛이 그대로!  겨울에 즐기는 상큼한 봄의 맛</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage6" data="251,34,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1573712976315.png" alt="더블 베이컨과 바비큐 소스로 더 특별해진 1955!"></div>
+                    <div class="con">
+                        <strong class="tit">더블 베이컨과 바비큐 소스로 더 특별해진 1955!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage6" data="244,35,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1569491676443.png" alt="맥드라이브 데이"></div>
+                    <div class="con">
+                        <strong class="tit">맥드라이브 데이</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage6" data="242,36,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1569379000525.png" alt="바삭하고 두툼한 닭봉으로만 구성된 맥윙™ 이번엔 맥봉이다!"></div>
+                    <div class="con">
+                        <strong class="tit">바삭하고 두툼한 닭봉으로만 구성된 맥윙<sub>™</sub> 이번엔 맥봉이다!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage7" data="236,37,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1567485734485.png" alt="솔티카라멜 1+1 증정 이벤트!"></div>
+                    <div class="con">
+                        <strong class="tit">솔티카라멜 1+1 증정 이벤트!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage7" data="235,38,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1567145074573.png" alt="2019 글로벌 빅맥 원정대"></div>
+                    <div class="con">
+                        <strong class="tit">2019 글로벌 빅맥 원정대</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage7" data="234,39,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1566972199482.png" alt="더 진한 맛으로 레벨업! New 콘파이!"></div>
+                    <div class="con">
+                        <strong class="tit">더 진한 맛으로 레벨업! New 콘파이!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage7" data="232,40,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1579579881387.png" alt="조건 없는 할인, 고민 없는 점심! 더욱 든든해진 맥올데이!"></div>
+                    <div class="con">
+                        <strong class="tit">조건 없는 할인, 고민 없는 점심! 더욱 든든해진 맥올데이!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage7" data="229,41,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1564046598223.png" alt="달콤상큼한 진한 파인애플의 맛 그대로! NEW 파인애플 칠러!"></div>
+                    <div class="con">
+                        <strong class="tit">달콤상큼한 진한 파인애플의 맛 그대로! NEW 파인애플 칠러!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage7" data="228,42,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1568029614116.png" alt="가격이 내려간다아아~ 3가지 불고기 버거 놀라운 할인!"></div>
+                    <div class="con">
+                        <strong class="tit">가격이 내려간다아아~ 3가지 불고기 버거 놀라운 할인!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="end">
+                <a class="endpage8" data="225,43,N">
+                    <div class="tmb"><img src="./upload/bbs/promotion/1564046079313.png" alt="더울 땐, 시원하게 칠러! 과일칠러 1000원!"></div>
+                    <div class="con">
+                        <strong class="tit">더울 땐, 시원하게 칠러!<br> 과일칠러 1000원!</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li>
+            
+            <!-- <li>
+                <a href="#" class="endpage8" data="108,44,N">
+                    <div class="tmb"><img src="./uploadFolder/banner/banner_pc_k201601311125022040.jpg" alt="1955 스모키의 화려한 컴백"></div>
+                    <div class="con">
+                        <strong class="tit">1955 스모키의 화려한 컴백</strong><span id="statusSpan">종료된 행사입니다.</span>
+                    </div>
+                </a>
+            </li> -->
+        </ul>         
+        <!-- 더보기버튼 -->
+        <div class="btnMore" id="btnMore">
+            <a href="javascript:more();" class="more">더보기</a>
+        </div>
+    
+    </div>
+</div>
+</div>
+<script>
+const contArea = document.querySelector("#promotionList");
+const btnMore = document.querySelector("#btnMore");
+const ingpage1 = document.querySelector(".ingpage1");
+const ingpage2 = document.querySelector(".ingpage2");
+const allbtn = document.querySelector("#allbtn");
+const ingbtn = document.querySelector("#ingbtn");
+const endbtn = document.querySelector("#endbtn");
+let inglist = document.querySelectorAll(".ing");
+let endlist = document.querySelectorAll(".end");
+
+
+
+// function more(){
+//     // e.preventDefault();
+// if(contArea.clientHeight<1111){
+
+//     contArea.style= "height: 1873px"
+//     ingpage1.style=" display:list-item"
+
+// } else if(contArea.clientHeight<1900 && contArea.clientHeight>1200){
+
+// contArea.style="height: 2647px"
+// ingpage2.style=" display:list-item"
+
+// } else if (contArea.clientHeight<2700 && contArea.clientHeight>1700){
+
+// contArea.style = "height : 2864px"
+// hideli31.style=" display:list-item"
+// hideli32.style=" display:list-item"
+// hideli33.style=" display:list-item"
+
+// btn1.style="display:none";
+
+//     }
+// }
+
+function AllClick(e) {
+    e.preventDefault();
+    for(i=0; i<inglist.length; i++){
+    inglist[i].classList = "ing";
+    }
+    for(i=0; i<endlist.length; i++){
+    endlist[i].classList = "end";
+    }
+    allbtn.className = "TrueRed";
+    ingbtn.className = "FalseRed"
+    endbtn.className = "FalseRed"
+}
+
+function IngClick(e) {
+    e.preventDefault();
+    for(i=0; i<inglist.length; i++){
+    inglist[i].classList = "ing";
+    }
+    for(i=0; i<endlist.length; i++){
+    endlist[i].classList = "none";
+    }
+    allbtn.className = "FalseRed";
+    ingbtn.className = "TrueRed"
+    endbtn.className = "FalseRed"
+}
+
+function EndClick(e) {
+    e.preventDefault();
+    for(i=0; i<inglist.length; i++){
+    inglist[i].classList = "none";
+    }
+    for(i=0; i<endlist.length; i++){
+    endlist[i].classList = "end";
+    }
+    allbtn.className = "FalseRed";
+    ingbtn.className = "FalseRed"
+    endbtn.className = "TrueRed"
+}
+
+
+allbtn.addEventListener('click', AllClick);
+ingbtn.addEventListener('click', IngClick);
+endbtn.addEventListener('click', EndClick);
+</script>
+</body>
+</html>
