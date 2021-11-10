@@ -43,8 +43,8 @@ a{text-decoration:none;color:inherit}
 .cardBanner li .end .tmb, .cardBanner li .end .tit{opacity:0.1}
 .cardBanner li .end:before {content:'';display:block;position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.05);border-radius:10px}
 .cardBanner li .end span {display:block;position:absolute;top:50%;left:0;width:100%;transform:translate(0,-50%);-webkit-transform:translate(0,-50%);color:#292929;font-size:18px;text-align:center}
-#btnMore{margin-top:80px;text-align:center}
-#btnMore #more{display:inline-block;width:90px;height:90px;overflow:hidden;vertical-align:top;text-indent:-9999px;background:url(./images/btn_more.png) 0 0 no-repeat}
+.btnMore{margin-top:80px;text-align:center}
+.btnMore .more{display:inline-block;width:90px;height:90px;overflow:hidden;vertical-align:top;text-indent:-9999px;background:url(./images/btn_more.png) 0 0 no-repeat}
 .visualArea.bgWhats01 {
     color: #fff;
     background: url(./images/bg_visual_whats02.jpg) 50% 50% no-repeat;
@@ -110,7 +110,7 @@ a{text-decoration:none;color:inherit}
         <div class="inner" id="bgWhats01inner">
             <h1 class="titDep1" data-title="맥도날드  프로모션" data-desc="맥도날드 프로모션">맥도날드 프로모션</h1>
             <ul class="navPath">
-                <li><a style="list-style: none;">Home</a></li>
+                <li><a style="list-style:none;">Home</a></li>
                 <li><a>What's New</a></li>
                 <li><a>맥도날드 프로모션</a></li>
             </ul>
@@ -129,7 +129,7 @@ a{text-decoration:none;color:inherit}
             
             <ul class="cardBanner" id="promotionList">
                 <!-- 진행중 메뉴 -->
-                <ul id="ingmenu">
+            <ul id="ingmenu">
                 <li class="ing">
                     <a class="ingpage1" data="345,1,N">
                         <div class="tmb"><img src="./upload/bbs/promotion/1635831788361.png" alt="맥도날드 앱에서 만나는 달콤한 바닐라 라떼 무료 쿠폰!"></div>
@@ -228,10 +228,19 @@ a{text-decoration:none;color:inherit}
                         </div>
                     </a>
                 </li>
+
+                <li class="none">
+                    <a class="ingpage2" data="259,11,N">
+                        <div class="tmb"><img src="./upload/bbs/promotion/1564040110875.png" alt="취향저격 쿠폰부터 쏠쏠한 정보까지! 지금 맥도날드 앱 가입하고 쿠폰받자"></div>
+                        <div class="con">
+                            <strong class="tit">취향저격 쿠폰부터 쏠쏠한 정보까지! 지금 맥도날드 앱 가입하고 쿠폰받자</strong><span id="statusSpan"></span>
+                        </div>
+                    </a>
+                </li>
             </ul>
                 <!-- end시작부분 -->
                <ul id="endmenu">
-                    <li class="end">
+                    <li class="none">
                         <a class="endpage1">
                             <div class="tmb"><img src="./upload/bbs/promotion/1634606805670.png" alt="맥도날드 앱에서 만나는특별한 할로윈 혜택!"></div>
                             <div class="con">
@@ -240,7 +249,7 @@ a{text-decoration:none;color:inherit}
                         </a>
                     </li>
                     
-                    <li class="end">
+                    <li class="none">
                         <a class="endpage1">
                             <div class="tmb"><img src="./upload/bbs/promotion/1633567702338.png" alt="1955 버거와 함께 할로윈을 더 특별하게! 1955 스모키 더블 베이컨 컴백!"></div>
                             <div class="con">
@@ -249,7 +258,7 @@ a{text-decoration:none;color:inherit}
                         </a>
                     </li>
                     
-                    <li class="end">
+                    <li class="none">
                         <a class="endpage1" data="337,3,N">
                             <div class="tmb"><img src="./upload/bbs/promotion/1631068063375.png" alt="점심을 제대로! 굿런치 맥런치!더블 에그 불고기 버거 출시!"></div>
                             <div class="con">
@@ -258,7 +267,7 @@ a{text-decoration:none;color:inherit}
                         </a>
                     </li>
                     
-                    <li class="end">
+                    <li class="none">
                         <a class="endpage1" data="336,4,N">
                             <div class="tmb"><img src="./upload/bbs/promotion/1630302597739.png" alt="자두 칠러와 제주 한라봉 칠러로 상큼 충전!"></div>
                             <div class="con">
@@ -267,7 +276,7 @@ a{text-decoration:none;color:inherit}
                         </a>
                     </li>
                     
-                    <li class="end">
+                    <li class="none">
                         <a class="endpage1" data="335,5,N">
                             <div class="tmb"><img src="./upload/bbs/promotion/1627975571281.png" alt="입안 가득 펼쳐지는 한국의 맛!  창녕 갈릭 버거"></div>
                             <div class="con">
@@ -276,7 +285,7 @@ a{text-decoration:none;color:inherit}
                         </a>
                     </li>
                     
-                    <li class="end">
+                    <li class="none">
                         <a class="endpage1" data="333,6,N">
                             <div class="tmb"><img src="./upload/bbs/promotion/1626828888817.png" alt="서머 콜라보레이션맥도날드XLCK 한정판 굿즈!"></div>
                             <div class="con">
@@ -639,8 +648,8 @@ a{text-decoration:none;color:inherit}
 let allbtn = document.querySelector("#allbtn");
 let ingbtn = document.querySelector("#ingbtn");
 let endbtn = document.querySelector("#endbtn");
-let inglist = document.querySelectorAll(".ing");
-let endlist = document.querySelectorAll(".end");
+// let inglist = document.querySelectorAll(".ing");
+// let endlist = document.querySelectorAll(".end");
 let ingmenu = document.querySelectorAll("#ingmenu li");
 let endmenu = document.querySelectorAll("#endmenu li");
 // let a = 6; //한페이지에 나타낼 메뉴개수
@@ -653,113 +662,157 @@ let ccnt = 0;
 function moreClick(){
     // e.preventDefault();
     // let className ="";
-    let endmenu6 = endmenu[6].className
-    let endmenu12 = endmenu[12].className
+    // let endmenu6 = endmenu[6].className
+    // let endmenu12 = endmenu[12].className
     console.log(ccnt)
-
-        if(ingbtn.className === "TrueRed") {
-            if(ccnt == 0){
-                for(i=6; i<ingmenu.length; i++) {
-                    ingmenu[i].className ="ing" 
-                } ccnt++;
-            }
-        }
-
-        if (endbtn.className === "TrueRed") {
-            if(ccnt == 0){
-                for(i=6; i<12; i++) {
-                    endmenu[i].className ="end"   
-                } ccnt++;
-            } else if (ccnt == 1) {
-                for(i=12; i<18; i++) {
-                    endmenu[i].className ="end"    
-                } ccnt++;
-            } else if (ccnt == 2) {
-                for(i=18; i<24; i++) {
-                    endmenu[i].className ="end"    
-                } ccnt++;
-            }
-                
-        }
+    // let ecN = endmenu[i].className ="end"
+    
+//allbtn on
+if(allbtn.className === "TrueRed") {
+    if(ccnt == 0) {
+        for(i=6; i<ingmenu.length; i++) {
+            ingmenu[i].className ="ing" 
+        } ccnt++;
+    } else if (ccnt == 1) {
+        for(i=0; i<6; i++) {
+            endmenu[i].className ="end"    
+        } ccnt++;
+    } else if (ccnt == 1) {
+        for(i=6; i<12; i++) {
+            endmenu[i].className ="end"    
+        } ccnt++;
+    } else if (ccnt == 2) {
+        for(i=12; i<18; i++) {
+            endmenu[i].className ="end"    
+        } ccnt++;
+    } else if (ccnt == 3) {
+        for(i=18; i<24; i++) {
+            endmenu[i].className ="end"    
+        } ccnt++;
+    } else if (ccnt == 4) {
+        for(i=24; i<30; i++) {
+            endmenu[i].className ="end"    
+        } ccnt++;
+    } else if (ccnt == 5) {
+        for(i=30; i<36; i++) {
+            endmenu[i].className ="end"    
+        } ccnt++;
+    } else if (ccnt == 6) {
+        for(i=36; i<42; i++) {
+            endmenu[i].className ="end"    
+        } ccnt++;
+    } else if (ccnt == 7) {
+        for(i=36; i<endmenu.length; i++) {
+            endmenu[i].className ="end"    
+        } ccnt++; 
+            btnMore.style = "display : none"
     }
-    
-        
+}
+
+//ingbtn on
+if(ingbtn.className === "TrueRed") {
+    if(ccnt == 0){
+        for(i=6; i<ingmenu.length; i++) {
+            ingmenu[i].className ="ing" 
+        } ccnt++;
+            btnMore.style = "display : none"
+    }
+}
+//endbtn on
+if (endbtn.className === "TrueRed") {     
+    if(ccnt == 0){
+        for(i=6; i<12; i++) {
+            endmenu[i].className ="end"   
+        } ccnt++;
+    } else if (ccnt == 1) {
+        for(i=12; i<18; i++) {
+            endmenu[i].className ="end"    
+        } ccnt++;
+    } else if (ccnt == 2) {
+        for(i=18; i<24; i++) {
+            endmenu[i].className ="end"    
+        } ccnt++;
+    } else if (ccnt == 3) {
+        for(i=24; i<30; i++) {
+            endmenu[i].className ="end"    
+        } ccnt++;
+    } else if (ccnt == 4) {
+        for(i=30; i<36; i++) {
+            endmenu[i].className ="end"    
+        } ccnt++;
+    } else if (ccnt == 5) {
+        for(i=36; i<42; i++) {
+            endmenu[i].className ="end"    
+        } ccnt++;
+    } else if (ccnt == 6) {
+        for(i=36; i<endmenu.length; i++) {
+            endmenu[i].className ="end"    
+        } ccnt++;
+            btnMore.style = "display : none" 
+    }
             
-
-    
-    // if(ingbtn.className==="TrueRed"){
-//     // for(x=2; x<=((inglist.length/6)+1); x++){
-//         for(x=2; x<=Math.ceil(ingmenu.length/a); x++){// x=1로변환
-//         if(inglist.length<=a){ //상수로변환필요
-//             // for(i=a; i<x*a; i++){
-//             for(i=a; i<ingmenu.length; i++){ //12가 되면 실행x
-//                 ingmenu[i].className = "ing";
-//             }
-//         }
-//     }
-// }
-// if(endbtn.className==="TrueRed"){
-    
-//         // for(x=0; x<parseInt(Math.ceil(endmenu.length/a)); x++){ //x값 문제잇음
-//         // if(endlist.length>=a*x){ //6 12 18 24
-//             // for(i=a*x; i<a*(x+1); i++){  //11 17 a*(x+1)
-        
-//             if( (endmenu[6].className="none") ){
-//                 for(i=6; i<12; i++){    //6~12 12~18
-//                     endmenu[i].className = "end";
-//                 } 
-//             } else if( (endmenu[6].className="end") || (endmenu[13].className="none") ){
-//                 for(i=12; i<18; i++) {
-//                     endmenu[i].className = "end";  
-//                 }
-//             }
-        
-//         }
-    
-// }
+}
 
 
+
+}
+    
+    
 function AllClick(e) {
     e.preventDefault();
-    // MoreChange.className = "allmore";
-    for(i=0; i<inglist.length; i++){
-    inglist[i].classList = "ing";
+
+    ccnt = 0;
+    for(i=0; i<6; i++){
+        ingmenu[i].classList = "ing";
     }
-    for(i=0; i<endlist.length; i++){
-    endlist[i].classList = "end";
+    for(i=6; i<ingmenu.length; i++){
+        ingmenu[i].classList = "none";
     }
-    allbtn.className = "TrueRed";
+    for(i=0; i<endmenu.length; i++){
+        endmenu[i].classList = "none";
+    }
+    allbtn.className = "TrueRed"
     ingbtn.className = "FalseRed"
     endbtn.className = "FalseRed"
+
+    btnMore.style = "display : block;"
 }
 
 function IngClick(e) {
     e.preventDefault();
-    // MoreChange.className = "ingmore";
-    for(i=0; i<inglist.length; i++){
-    inglist[i].classList = "ing";
+
+    ccnt = 0;
+    for(i=0; i<6; i++){
+        ingmenu[i].classList = "ing";
     }
-    for(i=0; i<endlist.length; i++){
-    endlist[i].classList = "none";
+    for(i=6; i<ingmenu.length; i++){
+        ingmenu[i].classList = "none";
+    }
+    for(i=0; i<endmenu.length; i++){
+        endmenu[i].classList = "none";
     }
     allbtn.className = "FalseRed";
     ingbtn.className = "TrueRed"
     endbtn.className = "FalseRed"
+
+    btnMore.style = "display : block;"
 }
 
 function EndClick(e) {
     e.preventDefault();
-    // MoreChange.className = "endmore";
 
-    for(i=0; i<inglist.length; i++){
-    inglist[i].classList = "none";
+    ccnt = 0;
+    for(i=0; i<6; i++){
+        endmenu[i].classList = "end";
     }
-    for(i=0; i<endlist.length; i++){
-    endlist[i].classList = "end";
+    for(i=0; i<ingmenu.length; i++){
+        ingmenu[i].classList = "none";
     }
     allbtn.className = "FalseRed";
     ingbtn.className = "FalseRed"
     endbtn.className = "TrueRed"
+
+    btnMore.style = "display : block;"
 }
 
 
@@ -767,7 +820,6 @@ allbtn.addEventListener('click', AllClick);
 ingbtn.addEventListener('click', IngClick);
 endbtn.addEventListener('click', EndClick);
 btnMore.addEventListener('click', moreClick);
-// btnMore.addEventListener('click', endmoreClick);
 
 </script>
 </body>
