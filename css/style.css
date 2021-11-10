@@ -1,0 +1,92 @@
+html{margin:0;height:100%}
+body{height:100%;background:#fff;word-wrap:break-word;word-break:keep-all}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,select,textarea,p,blockquote,th,td,button{margin:0;padding:0}
+body,input,select,textarea,button,pre{font-family:SpeedeeK, Malgun Gothic,'맑은 고딕', Dotum,'돋움', Arial, sans-serif;color:#808080;font-size: 16px;font-weight: 500;line-height:1.9;}
+section,nav,article,aside,hgroup,header,footer,iframe{display:block}
+form,fieldset,img,input,button {border:0 none;background:none}
+img {margin:0;padding:0;line-height:0;vertical-align:top;}
+em{font-style:normal}
+h1,h2,h3,h4,h5,h6,strong,b{font-weight:500}
+ul,ol,li{list-style:none outside}
+a{text-decoration:none;color:inherit}
+#container {width: 100%;}
+.content .contArea{padding: 30px 0 60px;}
+.content .contArea.bgG{background:#fbfbfb}
+.content .contArea>:first-child{margin-top:0!important}
+.content .contArea>.inner{position:static!important;}
+.inner {position: relative;width: 1168px;margin: 0 auto;}
+.visualArea{display:flex;position:relative;min-height: 220px;padding: 10px 0;color:#292929;text-align:left;}
+.visualArea .inner{display:flex;flex-direction:column;justify-content:center;height: 200px;margin:auto;padding-bottom: 15px;}
+.visualArea .titDep1{color:inherit;font-size: 50px;}
+.visualArea .subCopy{min-height: 34px;margin-top: 20px;font-size: 18px;}
+.visualArea .navPath{position:absolute;bottom:0;left:0}
+.tabType01{margin:0 -40px 60px;text-align:center}
+.tabType01 li{display:inline-block;margin:0 40px;vertical-align:top}
+.tabType01 li a{display:block;height:40px;font-size:20px;line-height:39px;cursor:pointer;}
+.tabType01 li a[aria-selected="true"]{color:#db0007;font-weight:600;border-bottom:1px solid #db0007}
+.tabCont, .subtabCont{display:none;position:relative}
+.cardBanner{margin:0 0 -35px -35px}
+.cardBanner:after{content:'';display:block;clear:both}
+.cardBanner li{float:left;width:366px;height:438px;margin:0 0 35px 35px}
+.cardBanner li a{display:block;overflow:hidden;height:100%;border-radius:10px;box-shadow:0 3px 4px rgba(0,0,0,.1)}
+.cardBanner li .con{padding:24px 30px}
+.cardBanner li .con .tit{display:-webkit-box;display:block;height:90px;overflow:hidden;text-overflow:ellipsis;-webkit-line-clamp:3;-webkit-box-orient:vertical;font-size:18px;color:#292929;font-weight:600;line-height:1.7}
+.cardBanner li .end{position:relative}
+.cardBanner li .end .tmb, .cardBanner li .end .tit{opacity:0.1}
+.cardBanner li .end:before {content:'';display:block;position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.05);border-radius:10px}
+.cardBanner li .end span {display:block;position:absolute;top:50%;left:0;width:100%;transform:translate(0,-50%);-webkit-transform:translate(0,-50%);color:#292929;font-size:18px;text-align:center}
+.btnMore{margin-top:80px;text-align:center}
+.btnMore .more{display:inline-block;width:90px;height:90px;overflow:hidden;vertical-align:top;text-indent:-9999px;background:url(../images/btn_more.png) 0 0 no-repeat}
+.visualArea.bgWhats01 {
+    color: #fff;
+    background: url(../images/bg_visual_whats02.jpg) 50% 50% no-repeat;
+}
+.visualArea[class="bgWhats01"] .inner {
+    height: 170px;
+    margin: 60px auto 0;
+}
+.TrueRed{
+    color: #db0007;
+    font-weight: 600;
+    border-bottom: 1px solid #db0007;
+    /* display: block; */
+    height: 40px;
+    font-size: 20px;
+    line-height: 39px;
+    }
+.FalseRed
+    {
+    display: block;
+    height: 40px;
+    font-size: 20px;
+    line-height: 39px;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    }
+.navPath li {
+    display: inline-block;
+}
+.titDep1 {
+    display: block;
+    color: #292929;
+    font-size: 55px;
+    line-height: 1;
+}
+.navPath li {
+    display: inline-block;
+    color:white;
+    font-weight: 700;
+    font-size: 16px;
+}
+.navPath li+li:before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0 14px0 10px;
+    vertical-align: middle;
+    border-radius: 100%;
+    background: #f5bd43;
+}
+.none{display:none;}
