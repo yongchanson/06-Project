@@ -5,54 +5,52 @@ const btnMore = document.querySelector("#btnMore");
 
 let ingmenu = document.querySelectorAll("#ingmenu li");
 let endmenu = document.querySelectorAll("#endmenu li");
-// let a = 6; //한페이지에 나타낼 메뉴개수
+let a = 6; //한페이지에 나타낼 메뉴개수
 
 let ccnt = 0;
 
-function moreClick(){
-    // e.preventDefault();
-    // let className ="";
-    // let endmenu6 = endmenu[6].className
-    // let endmenu12 = endmenu[12].className
-    console.log(ccnt)
-    // let ecN = endmenu[i].className ="end"
+function moreClick(e){
+    e.preventDefault();
+    // console.log(ccnt)
+    
     
 //allbtn on
 if(allbtn.className === "TrueRed") {
+    
     if(ccnt == 0) {
-        for(i=6; i<ingmenu.length; i++) {
+        for(i=a; i<ingmenu.length; i++) {
             ingmenu[i].className ="ing" 
         } ccnt++;
     } else if (ccnt == 1) {
-        for(i=0; i<6; i++) {
-            endmenu[i].className ="end"    
-        } ccnt++;
-    } else if (ccnt == 1) {
-        for(i=6; i<12; i++) {
+        for(i=0; i<a; i++) {
             endmenu[i].className ="end"    
         } ccnt++;
     } else if (ccnt == 2) {
-        for(i=12; i<18; i++) {
+        for(i=a; i<2*a; i++) {
             endmenu[i].className ="end"    
         } ccnt++;
     } else if (ccnt == 3) {
-        for(i=18; i<24; i++) {
+        for(i=2*a; i<3*a; i++) {
             endmenu[i].className ="end"    
         } ccnt++;
     } else if (ccnt == 4) {
-        for(i=24; i<30; i++) {
+        for(i=3*a; i<4*a; i++) {
             endmenu[i].className ="end"    
         } ccnt++;
     } else if (ccnt == 5) {
-        for(i=30; i<36; i++) {
+        for(i=4*a; i<5*a; i++) {
             endmenu[i].className ="end"    
         } ccnt++;
     } else if (ccnt == 6) {
-        for(i=36; i<42; i++) {
+        for(i=5*a; i<6*a; i++) {
             endmenu[i].className ="end"    
         } ccnt++;
     } else if (ccnt == 7) {
-        for(i=42; i<endmenu.length; i++) {
+        for(i=6*a; i<7*a; i++) {
+            endmenu[i].className ="end"    
+        } ccnt++;
+    } else if (ccnt == 8) {
+        for(i=7*a; i<endmenu.length; i++) {
             endmenu[i].className ="end"    
         } ccnt++; 
             btnMore.style = "display : none"
@@ -63,7 +61,7 @@ if(allbtn.className === "TrueRed") {
 //ingbtn on
 if(ingbtn.className === "TrueRed") {
     if(ccnt == 0){
-        for(i=6; i<ingmenu.length; i++) {
+        for(i=a; i<ingmenu.length; i++) {
             ingmenu[i].className ="ing" 
         } ccnt++;
             btnMore.style = "display : none"
@@ -72,31 +70,31 @@ if(ingbtn.className === "TrueRed") {
 //endbtn on
 if (endbtn.className === "TrueRed") {     
     if(ccnt == 0){
-        for(i=6; i<12; i++) {
+        for(i=a; i<2*a; i++) {
             endmenu[i].className ="end"   
         } ccnt++;
     } else if (ccnt == 1) {
-        for(i=12; i<18; i++) {
+        for(i=2*a; i<3*a; i++) {
             endmenu[i].className ="end"    
         } ccnt++;
     } else if (ccnt == 2) {
-        for(i=18; i<24; i++) {
+        for(i=3*a; i<4*a; i++) {
             endmenu[i].className ="end"    
         } ccnt++;
     } else if (ccnt == 3) {
-        for(i=24; i<30; i++) {
+        for(i=4*a; i<5*a; i++) {
             endmenu[i].className ="end"    
         } ccnt++;
     } else if (ccnt == 4) {
-        for(i=30; i<36; i++) {
+        for(i=5*a; i<6*a; i++) {
             endmenu[i].className ="end"    
         } ccnt++;
     } else if (ccnt == 5) {
-        for(i=36; i<42; i++) {
+        for(i=6*a; i<7*a; i++) {
             endmenu[i].className ="end"    
         } ccnt++;
     } else if (ccnt == 6) {
-        for(i=42; i<endmenu.length; i++) {
+        for(i=7*a; i<endmenu.length; i++) {
             endmenu[i].className ="end"    
         } ccnt++;
             btnMore.style = "display : none" 
