@@ -217,6 +217,7 @@ map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
 var mapTypeControl = new daum.maps.MapTypeControl();
 map.addControl(mapTypeControl, daum.maps.ControlPosition.TOPRIGHT);
+
 var positions = [
 {
     title: '한국맥도날드(유)', 
@@ -254,9 +255,9 @@ if(confirm("위치정보의 사용시 보안된 페이지에서 위치정보을 
            lon = position.coords.longitude; // 경도
        var locPosition = new kakao.maps.LatLng(lat, lon); // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
        map.panTo(locPosition);
-         $("#lat").val(lat);
-         $("#lng").val(lon);
-         page(1);
+        //  $("#lat").val(lat);
+        //  $("#lng").val(lon);
+        //  page(1);
       });
     //gohttps();
 }else{
@@ -325,12 +326,6 @@ $("#searchForm").submit();
 }
 </script>
        
-</div>
-        <div class="aside">
-            <a href="https://www.mcdelivery.co.kr/kr/" class="goDelivery" target="_blank" title="새창 열림">Mcdelivery</a>
-        </div>
-        <button type="button" class="btnTop">맨 위로 가기</button>
-    </div> 
 
 </body>
 </html>
