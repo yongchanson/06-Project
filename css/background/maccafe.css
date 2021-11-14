@@ -1,0 +1,15 @@
+.bmac{
+
+    width:100%;
+    height:40%;
+    background: url(../img/bgmac.jpg) 50% 50% no-repeat;
+    background-color : gray;
+    background-size: cover;
+    display: flex;
+    position: relative;
+    min-height: 220px;
+    padding: 10px 0;
+    color: #292929;
+    text-align: left;
+
+}
