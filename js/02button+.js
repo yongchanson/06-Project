@@ -1,72 +1,123 @@
+//단품, 세트메뉴 li
+const solo = document.querySelector("#solo");
+const set = document.querySelector("#set");
+
+//단품일때, 세트일때 ul를 none or 보이게
+const soloMenu = document.querySelector("#mcMenu1");
+const setMenu = document.querySelector("#mcMenu22");
+const btnMore = document.querySelector(".btnMore");
+
+//menuList li를 보이게끔, 그리고 버튼클릭시 none된 클래스들이 보이게
+let menuList = document.querySelectorAll(".menuList li");
+let menuList2 = document.querySelectorAll(".menuList2 li");
+let ccnt = 0;
 var contArea = document.getElementById("contArea1");
-var hideli11 = document.getElementById("hideli1-1");
-var hideli12 = document.getElementById("hideli1-2");
-var hideli13 = document.getElementById("hideli1-3");
-var hideli14 = document.getElementById("hideli1-4");
-var hideli15 = document.getElementById("hideli1-5");
-var hideli16 = document.getElementById("hideli1-6");
 
-var hideli21 = document.getElementById("hideli2-1");
-var hideli22 = document.getElementById("hideli2-2");
-var hideli23 = document.getElementById("hideli2-3");
-var hideli24 = document.getElementById("hideli2-4");
-var hideli25 = document.getElementById("hideli2-5");
-var hideli26 = document.getElementById("hideli2-6");
-
-var hideli31 = document.getElementById("hideli3-1");
-var hideli32 = document.getElementById("hideli3-2");
-var hideli33 = document.getElementById("hideli3-3");
-
-var btn1 = document.getElementById("btnmore1");
 function more(){
 
     if(contArea.clientHeight<1111){
 
     contArea.style= "height: 1873px"
-    hideli11.style=" display:list-item"
-    hideli12.style=" display:list-item"
-    hideli13.style=" display:list-item"
-    hideli14.style=" display:list-item"
-    hideli15.style=" display:list-item"
-    hideli16.style=" display:list-item"
+
     
 } else if(contArea.clientHeight<1900 && contArea.clientHeight>1200){
 
     contArea.style="height: 2647px"
-    hideli21.style=" display:list-item"
-    hideli22.style=" display:list-item"
-    hideli23.style=" display:list-item"
-    hideli24.style=" display:list-item"
-    hideli25.style=" display:list-item"
-    hideli26.style=" display:list-item"
+
     
 }   else if (contArea.clientHeight<2700 && contArea.clientHeight>1700){
 
     contArea.style = "height : 2864px"
-    hideli31.style=" display:list-item"
-    hideli32.style=" display:list-item"
-    hideli33.style=" display:list-item"
 
-    btn1.style="display:none";
     
 }
     
 }
 
 
-function asd(){
-    var contArea = document.getElementById("contArea1");
+function moreClick(){
     
-    console.log(contArea.clientHeight);
+if(solo.className === "TrueRed"){
+    ccnt++;
+    if(ccnt == 1){
+        for(i=6; i<12; i++){
+            menuList[i].className="sololi"
+    } 
+    }else if(ccnt == 2){
+        for(i=12; i<18; i++){
+            menuList[i].className="sololi"
+    } 
+    }else if(ccnt == 3){
+        for(i=18; i<menuList.length; i++){
+            menuList[i].className="sololi"
+    } 
+        btnMore.style ="display : none"
+    }
+}
+
+if(set.className === "TrueRed"){
+
+    ccnt++;
+
+    if(ccnt == 1){
+        for(i=6; i<12; i++){
+            menuList2[i].className="sololi"
+    }
+    }else if(ccnt == 2){
+        for(i=12; i<18; i++){
+            menuList2[i].className="sololi"
+    } 
+    }else if(ccnt == 3){
+        for(i=18; i<menuList2.length; i++){
+            menuList2[i].className="sololi"
+    } 
+        btnMore.style ="display : none"
+     }
+    }
+}
+
+function soloClick(e){
+   e.preventDefault();
+
+   ccnt = 0;
+
+   for(i=0; i<6; i++){
+       menuList[i].className ="sololi";
+   }
+   for(i=6; i<menuList.length; i++){
+    menuList[i].className = "none";
+}
+
+contArea.style = "height : 1099px"
+   solo.className= "TrueRed";
+   set.className= "FalseRed";
+   soloMenu.className = "mcMenu";
+   setMenu.className = "none";
+    
+   btnMore.style = "display : block;"
 }
 
 
-function gotoMenu2(){
-    var mcMenu1 = document.getElementById("mcMenu1")
-    var mcMenu2 = document.getElementById("mcMenu22")
+function setClick(e){
+    e.preventDefault();
 
-    
+    ccnt = 0;
 
+    for(i=0; i<6; i++){
+        menuList2[i].className = "sololi"
+    }
+    for(i=6; i<menuList2.length; i++){
+     menuList2[i].className = "none";
+    }
+ contArea.style = "height : 1099px"
+    set.className= "TrueRed";
+    solo.className= "FalseRed";
+    setMenu.className = "mcMenu";
+    soloMenu.className = "none";
 
-    
+   btnMore.style = "display : block;"
 }
+
+solo.addEventListener('click', soloClick);
+set.addEventListener('click', setClick);
+btnMore.addEventListener('click', moreClick);
