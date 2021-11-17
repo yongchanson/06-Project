@@ -12,8 +12,36 @@
     <link rel="stylesheet" type="text/css" href="css/MacD.css">
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>
+    function addrfunc(){
+        var addr1 = document.getElementById("addr1");
+    new daum.Postcode({
+        oncomplete: function(data){
+            if(data.userSelectedType === 'R'){
+        		addr1.value = data.roadAddress;
+        		//alert(data.roadAddress + "\n" + data.zonecode);
+        	} 
+        	else{
 
-  
+        		addr1.value = data.jibunAddress;
+        		
+        		//alert(data.jibunAddress+ "\n" +data.zonecode);
+        	}
+          
+           
+        }
+    }).open();
+}
+
+// function submit(){ //내 주소 주변 맥날 가게 찾기 && 가게로부터의 주변 몇km까지 맥딜리버리가 가능한지
+//        if(){    //매장 1km근접에 있다면?
+//             //가능하다는 표시
+//        } else{ //없다면?
+//             //불가능하다는 표시
+//        }
+// }
+</script>
 </head>
 
 <body>
@@ -111,12 +139,12 @@
                             <span id ="sppan">
                                 <input type="text" class="addr1" id = "addr1" placeholder="주소를 선택해주세요." readonly title="입력 된 주소">
                             </span>
-                            <button type="button" class="btnMC btnM" onclick="openApiPost()" title="주소찾기 새창림">주소찾기</button>
+                            <button type="button" class="btnMC btnM" onclick="addrfunc()" title="주소찾기 새창림">주소찾기</button>
                         </div>
                         <div class="frm">
                             <input type="text" class="addr2" id="addr2" title="상세주소 입력" placeholder="상세주소를 입력하세요.">
                             <input type="text" class="addr3" id="addr3" title=" 동입력">
-                            <span class="unit">동</span>
+                            <span class="unit">동</span>    
                             <input type="text" class="addr3" id="ho" title=" 호입력">
                             <span class="unit">호</span>
                         </div>

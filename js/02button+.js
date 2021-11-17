@@ -13,6 +13,9 @@ let menuList2 = document.querySelectorAll(".menuList2 li");
 let ccnt = 0;
 var contArea = document.getElementById("contArea1");
 
+count1.innerText = menuList.length+"products";
+count2.innerText = menuList2.length+"products";
+
 function more(){
 
     if(contArea.clientHeight<1111){
